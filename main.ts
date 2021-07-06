@@ -1,10 +1,10 @@
 namespace Car{
 
     //% blockId=run
-    //% block="はしる %じかん %はやさ"
-    export function はしる (じかん秒: number, はやさ: number) {
-        if (input.runningTime() / 1000 <= じかん秒) {
-            maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, はやさ)
+    //% block="はしる %time %speed"
+    export function はしる (time: number, speed: number) {
+        if (input.runningTime() / 1000 <= time) {
+            maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, speed)
         } else {
             maqueen.motorStop(maqueen.Motors.All)
         }
