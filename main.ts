@@ -1,10 +1,13 @@
-function はしる (じかん秒: number, はやさ: number) {
-    if (input.runningTime() / 1000 <= じかん秒) {
-        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 255 / 100 * はやさ)
-    } else {
-        maqueen.motorStop(maqueen.Motors.All)
+//% color=190 weight=100 icon="\uf179" block="Car Blocks"
+namespace Car{
+
+    // % blockId=run
+    // % block="はしる"
+    export function はしる (じかん秒: number, はやさ: number) {
+        if (input.runningTime() / 1000 <= じかん秒) {
+            maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, はやさ)
+        } else {
+            maqueen.motorStop(maqueen.Motors.All)
+        }
     }
 }
-basic.forever(function () {
-    はしる(3, 10)
-})
